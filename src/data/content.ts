@@ -1,16 +1,16 @@
-import type { Profile, JourneyItem, ResearchArea, Publication, Course } from '../types'
+import type { Profile, JourneyItem, ResearchArea, Publication, Course, NewsItem } from '../types'
 
 export const profile: Profile = {
   name: 'Dr. Susil Kumar Mohanty',
   title: 'Assistant Professor',
   department: 'Computer Science & Engineering',
-  institution: 'Indian Institute of Technology Jodhpur',
+  institution: 'Indian Institute of Technology (IIT) Jodhpur',
   email: 'susilmohanty@iitj.ac.in',
   phone: '0291-280-1281',
   officeRoom: 'Room 228, 1st Floor, CSE Department',
   address: 'NH 62, Nagaur Road, Karwar, Jodhpur, Rajasthan, India 342030',
   researchTagline: 'Securing decentralized systems through cryptographic primitives',
-  about: `Dr. Susil Kumar Mohanty is an Assistant Professor in the Department of Computer Science & Engineering at IIT Jodhpur. His research spans blockchain technologies, payment channel networks, zero-knowledge proofs, and decentralized systems. He previously held a postdoctoral research position at the University of Warsaw's Cryptography and Blockchain Group under Prof. Stefan Dziembowski, where he worked on the ERC Advanced Grant project PROCONTRA. He completed his doctorate at IIT Patna under the guidance of Prof. Somanath Tripathy.`,
+  about: `Dr. Susil Kumar Mohanty is currently working as an Assistant Professor in the Department of Computer Science and Engineering at Indian Institute of Technology (IIT) Jodhpur. Before joining IIT Jodhpur, he was a Post-doctoral Researcher at the Faculty of Mathematics, Informatics, and Mechanics (MIM), University of Warsaw (UW), Poland, where he worked in the Cryptography and Blockchain Group hosted by Prof. Stefan Dziembowski. He completed his Ph.D. in the Department of Computer Science and Engineering at the Indian Institute of Technology (IIT) Patna, where he had the privilege of working under the supervision of Prof. Somanath Tripathy in the SLIP: Security Lab @ IIT Patna.`,
   socialLinks: [
     {
       platform: 'google-scholar',
@@ -47,7 +47,7 @@ export const journeyItems: JourneyItem[] = [
     id: 'asst-prof-iitj',
     type: 'experience',
     title: 'Assistant Professor',
-    institution: 'Indian Institute of Technology Jodhpur',
+    institution: 'Indian Institute of Technology (IIT) Jodhpur',
     period: { start: 2025, end: 'present' },
     location: 'Jodhpur, Rajasthan, India',
     description: 'Department of Computer Science & Engineering, Room 228, 1st Floor',
@@ -67,18 +67,18 @@ export const journeyItems: JourneyItem[] = [
     id: 'phd-iitpatna',
     type: 'education',
     title: 'Ph.D. in Computer Science & Engineering',
-    institution: 'Indian Institute of Technology Patna',
+    institution: 'Indian Institute of Technology (IIT) Patna',
     period: { start: 2019, end: 2023 },
     location: 'Patna, India',
     supervisor: 'Prof. Somanath Tripathy',
     thesis: 'Design and Analysis of Secure Off-chain Transactions for Blockchain-based Payment Channel Networks',
-    description: 'SLIP: Security Lab',
+    description: 'SLIP: Security Lab @ IIT Patna',
   },
   {
     id: 'project-iitkanpur',
     type: 'experience',
     title: 'Project Associate',
-    institution: 'Indian Institute of Technology Kanpur',
+    institution: 'Indian Institute of Technology (IIT) Kanpur',
     period: { start: 2018, end: 2018 },
     location: 'Kanpur, India',
     supervisor: 'Prof. Laxmidhar Behera',
@@ -94,6 +94,7 @@ export const journeyItems: JourneyItem[] = [
     supervisor: 'Prof. Siba Kumar Udgata',
     thesis: 'Interference Minimization in Wireless Sensor Networks using SINR/Physical Model',
     rank: 'Rank 2',
+    description: 'WiSeComLab @ University of Hyderabad',
   },
   {
     id: 'ms-utkal',
@@ -339,6 +340,29 @@ export const publications: Publication[] = [
   },
 ]
 
+export const news: NewsItem[] = [
+  {
+    id: 'crypto-2026-accepted',
+    text: 'One of our papers, Beholder Signatures, has been accepted to CRYPTO 2026.',
+    featured: true,
+  },
+  {
+    id: 'army-konark-talk',
+    date: '10 June 2026',
+    text: 'Gave a talk on Data Privacy and Blockchain for Defense Applications at the Army Konark Corps, Jodhpur, for senior Army officials.',
+  },
+  {
+    id: 'bcft-workshop',
+    date: '22 May 2026',
+    text: 'Represented at the Workshop for the Centre of Excellence in Blockchain and Cybersecurity, held at the Brahmagupta Centre for Frontier Technologies (BCFT), Bhamashah Techno Hub (BTH) — a flagship initiative of the Government of Rajasthan.',
+  },
+  {
+    id: 'nit-raipur-fdp',
+    date: '26 February 2026',
+    text: 'Gave a talk on Blockchain-based Payment Channel Networks at the NIT Raipur Faculty Development Programme on Advanced Topics in FinTech Security.',
+  },
+]
+
 export const spritLabUrl = 'https://example.com/sprit-lab'
 
 export const courses: Course[] = [
@@ -372,6 +396,22 @@ export const courses: Course[] = [
       'Colin Boyd et al., "Protocols for Authentication and Key Establishment"',
       'D. Stinson and M. Paterson, "Cryptography: Theory and Practice"',
       'P. W. Singer and A. Friedman, "Cybersecurity and Cyberwar"',
+    ],
+  },
+  {
+    id: 'csl3030',
+    code: 'CSL 3030',
+    name: 'Operating Systems (Theory + Lab)',
+    semester: 'Spring',
+    year: 2026,
+    active: true,
+    syllabusUrl: 'https://iitj.ac.in/PageImages/Gallery/07-2025/CSE-Courses-Details.pdf',
+    description:
+      'Covers process and thread management, CPU scheduling, synchronization and deadlocks, memory management and virtual memory, file systems, and I/O subsystems, with a hands-on lab component implementing core operating-system concepts.',
+    textbooks: [
+      'A. Silberschatz, P. B. Galvin and G. Gagne, "Operating System Concepts"',
+      'A. S. Tanenbaum and H. Bos, "Modern Operating Systems"',
+      'W. Stallings, "Operating Systems: Internals and Design Principles"',
     ],
   },
 ]

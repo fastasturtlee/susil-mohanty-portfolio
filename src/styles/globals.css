@@ -58,10 +58,13 @@
 
   html {
     scroll-behavior: smooth;
+    /* Background lives on <html> so the fixed -z-10 canvas
+       (BlockchainBackground) is not hidden behind an opaque <body>. */
+    background-color: var(--color-background);
   }
 
   body {
-    background-color: var(--color-background);
+    background-color: transparent;
     color: var(--color-text);
     font-family: var(--font-sans);
     font-size: 16px;

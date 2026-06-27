@@ -1,8 +1,8 @@
 import { motion } from 'motion/react'
-import { GraduationCap, Link2, Code2, BookOpen, FlaskConical, ChevronRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { GraduationCap, Link2, Code2, BookOpen, FlaskConical, ExternalLink } from 'lucide-react'
 import type { Profile } from '../../types'
 import type { SocialPlatform } from '../../types'
+import { spritLabUrl } from '../../data/content'
 
 const platformIcons: Record<SocialPlatform, React.ReactNode> = {
   'google-scholar': <GraduationCap size={18} aria-hidden="true" />,
@@ -20,7 +20,7 @@ export default function Hero({ profile }: HeroProps) {
   return (
     <section
       aria-label="Introduction"
-      className="bg-[var(--color-background)] pt-16 pb-20"
+      className="bg-[var(--color-background)]/70 pt-16 pb-20"
     >
       <div className="mx-auto max-w-[1100px] px-4">
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
@@ -37,7 +37,7 @@ export default function Hero({ profile }: HeroProps) {
                 ★ CRYPTO 2026
               </span>
               <span className="inline-flex items-center rounded-full bg-[var(--color-teal-light)] text-[var(--color-teal)] px-3 py-1 text-xs font-semibold">
-                ERC Postdoc · Univ. of Warsaw
+                ERC Postdoc · University of Warsaw, Poland
               </span>
             </div>
 
@@ -47,21 +47,33 @@ export default function Hero({ profile }: HeroProps) {
             <p className="mt-2 text-lg text-[var(--color-teal)] font-medium">
               {profile.title}
             </p>
-            <p className="mt-1 text-base text-[var(--color-text-muted)]">
-              {profile.department} · {profile.institution}
+            <p className="mt-2 text-base text-[var(--color-text-muted)]">
+              Department of {profile.department}
             </p>
-            <p className="mt-4 text-base text-[var(--color-text-muted)] max-w-xl leading-relaxed">
+            <p className="text-base text-[var(--color-text-muted)]">
+              {profile.institution}
+            </p>
+            <p className="mt-1 text-sm text-[var(--color-text-muted)] leading-relaxed">
+              {profile.address}
+            </p>
+
+            <p className="mt-3 text-sm italic text-[var(--color-text-muted)]">
               {profile.researchTagline}
             </p>
 
-            {/* CTA buttons */}
-            <div className="mt-7 flex flex-wrap justify-center md:justify-start gap-3">
-              <Link
-                to="/publications"
-                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-teal)] px-5 py-2.5 text-sm font-medium text-white hover:bg-[var(--color-teal-hover)] transition-colors"
+            {/* SPriT Lab button */}
+            <div className="mt-5 flex flex-wrap justify-center md:justify-start gap-3">
+              <a
+                href={spritLabUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Security, Privacy, and Trust (SPriT) Lab (opens in new tab)"
+                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-teal)] px-4 py-2 text-sm font-medium text-white hover:bg-[var(--color-teal-hover)] transition-colors"
               >
-                View Publications <ChevronRight size={15} aria-hidden="true" />
-              </Link>
+                <FlaskConical size={15} aria-hidden="true" />
+                Security, Privacy, and Trust (SPriT) Lab
+                <ExternalLink size={13} aria-hidden="true" />
+              </a>
             </div>
 
             {/* Social links */}

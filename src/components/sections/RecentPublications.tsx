@@ -14,7 +14,7 @@ export default function RecentPublications({ publications }: RecentPublicationsP
   const recent = publications.slice(0, 3)
 
   return (
-    <section aria-labelledby="recent-pubs-heading" className="py-16 bg-[var(--color-background)]">
+    <section aria-labelledby="recent-pubs-heading" className="py-16 bg-[var(--color-background)]/70">
       <div className="mx-auto max-w-[1100px] px-4">
         <SectionHeader id="recent-pubs-heading" title="Recent Publications" />
         <div className="flex flex-col gap-4">

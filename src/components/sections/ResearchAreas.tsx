@@ -9,7 +9,7 @@ interface ResearchAreasProps {
 
 export default function ResearchAreas({ areas }: ResearchAreasProps) {
   return (
-    <section aria-labelledby="research-heading" className="py-16 bg-[var(--color-surface)]">
+    <section aria-labelledby="research-heading" className="py-16 bg-[var(--color-surface)]/70">
       <div className="mx-auto max-w-[1100px] px-4">
         <SectionHeader
           id="research-heading"

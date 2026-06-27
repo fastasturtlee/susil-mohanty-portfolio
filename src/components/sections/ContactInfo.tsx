@@ -49,7 +49,7 @@ export default function ContactInfo({ profile }: ContactInfoProps) {
             <div>
               <p className="text-xs text-[var(--color-text-muted)] uppercase tracking-wide">Office</p>
               <p className="text-sm text-[var(--color-text)]">{profile.officeRoom}</p>
-              <p className="text-sm text-[var(--color-text-muted)]">{profile.department}</p>
+              <p className="text-sm text-[var(--color-text-muted)]">{profile.institution}</p>
             </div>
           </div>
 

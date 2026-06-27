@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://username.github.io/dr-susil-mohanty/sitemap.xml
+Sitemap: https://home.iitj.ac.in/~susilmohanty/sitemap.xml

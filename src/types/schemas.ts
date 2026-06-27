@@ -52,6 +52,13 @@ export const CourseSchema = z.object({
   textbooks: z.array(z.string()).optional(),
 })
 
+export const NewsItemSchema = z.object({
+  id: z.string(),
+  date: z.string().optional(),
+  text: z.string(),
+  featured: z.boolean().optional(),
+})
+
 export const SocialLinkSchema = z.object({
   platform: z.enum(['google-scholar', 'researchgate', 'dblp', 'linkedin', 'github']),
   label: z.string(),

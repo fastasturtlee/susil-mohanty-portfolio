@@ -11,12 +11,13 @@ export default function ProspectiveStudents({ email }: ProspectiveStudentsProps)
       className="mt-12 rounded-2xl border border-[var(--color-teal)]/30 bg-[var(--color-teal-light)] p-8"
     >
       <h2 id="prospective-heading" className="font-serif text-2xl text-[var(--color-text)]">
-        For Prospective PhD Students
+        For Prospective Students &amp; Researchers
       </h2>
       <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed max-w-2xl">
-        I am always looking for motivated Ph.D. students interested in blockchain security,
-        cryptographic protocols, payment channel networks, and related areas. If you are interested
-        in working with me, please send an email with the following information:
+        I am always looking for motivated Ph.D. students, interns, Research Associates, Research
+        Assistants, and BTP/MTP students interested in blockchain security, cryptographic protocols,
+        payment channel networks, and related areas. If you are interested in working with me, please
+        send an email with the following information:
       </p>
       <ul className="mt-4 space-y-2 text-sm text-[var(--color-text-muted)]">
         <li className="flex gap-2">
@@ -40,10 +41,10 @@ export default function ProspectiveStudents({ email }: ProspectiveStudentsProps)
         I typically respond within 3–5 business days. Generic emails without the above details may not receive a reply.
       </p>
       <a
-        href={`mailto:${email}?subject=PhD Inquiry`}
+        href={`mailto:${email}?subject=Research Inquiry`}
         className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--color-teal)] px-5 py-2.5 text-sm font-medium text-white hover:bg-[var(--color-teal-hover)] transition-colors"
       >
-        <Mail size={15} aria-hidden="true" /> Send PhD Inquiry
+        <Mail size={15} aria-hidden="true" /> Send Inquiry
       </a>
     </section>
   )

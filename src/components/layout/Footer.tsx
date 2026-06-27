@@ -14,14 +14,30 @@ const platformIcons: Record<SocialPlatform, React.ReactNode> = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface)] mt-20">
-      <div className="mx-auto max-w-[1100px] px-4 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <footer className="border-t border-white/20 bg-[var(--color-teal)] mt-20">
+      <div className="mx-auto max-w-[1100px] px-4 py-10 flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
         <div className="text-center sm:text-left">
-          <p className="font-serif text-base text-[var(--color-text)]">{profile.name}</p>
-          <p className="text-sm text-[var(--color-text-muted)] mt-0.5">
-            {profile.title} · {profile.department}
+          <p className="font-serif text-base text-white">{profile.name}</p>
+          <p className="text-sm text-white/75 mt-0.5">{profile.title}</p>
+          <p className="text-sm text-white/75">Department of {profile.department}</p>
+          <p className="text-sm text-white/75">{profile.institution}</p>
+          <p className="text-sm text-white/75 mt-2">
+            <a
+              href={`mailto:${profile.email}`}
+              className="hover:text-white transition-colors"
+            >
+              {profile.email}
+            </a>
           </p>
-          <p className="text-xs text-[var(--color-text-muted)] mt-3">
+          <p className="text-sm text-white/75">
+            <a
+              href={`tel:${profile.phone.replace(/[^+\d]/g, '')}`}
+              className="hover:text-white transition-colors"
+            >
+              {profile.phone}
+            </a>
+          </p>
+          <p className="text-xs text-white/60 mt-3">
             Last updated: {BUILD_DATE}
           </p>
         </div>
@@ -34,7 +50,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${label} (opens in new tab)`}
-              className="flex items-center gap-1.5 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-teal)] transition-colors"
+              className="flex items-center gap-1.5 text-sm text-white/75 hover:text-white transition-colors"
             >
               {platformIcons[platform]}
               <span className="hidden sm:inline">{label}</span>

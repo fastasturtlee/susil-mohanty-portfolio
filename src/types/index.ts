@@ -47,6 +47,13 @@ export interface Course {
   textbooks?: string[];
 }
 
+export interface NewsItem {
+  id: string;
+  date?: string;
+  text: string;
+  featured?: boolean;
+}
+
 export type SocialPlatform = 'google-scholar' | 'researchgate' | 'dblp' | 'linkedin' | 'github';
 
 export interface SocialLink {
