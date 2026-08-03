@@ -23,9 +23,11 @@ function RootLayout() {
   )
 }
 
-// Derived from vite.config.ts `base`: '/' in dev, '/~susilmohanty/' in prod.
+// From vite.config.ts `define`: '/' in dev, '/~susilmohanty/' in prod. (We can't use
+// import.meta.env.BASE_URL here — vite-plugin-singlefile forces it to './', which would
+// make the basename '.' and match no route → blank screen.)
 // Remove trailing slash; fall back to '/' so the router always has a valid basename.
-const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+const basename = __DEPLOY_BASE__.replace(/\/$/, '') || '/'
 
 const router = createBrowserRouter(
   [

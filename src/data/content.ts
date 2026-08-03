@@ -15,7 +15,7 @@ export const profile: Profile = {
     {
       platform: 'google-scholar',
       label: 'Google Scholar',
-      url: 'https://scholar.google.com/citations?user=susilmohanty',
+      url: 'https://scholar.google.com/citations?hl=en&user=JBrbQ5sAAAAJ&view_op=list_works',
     },
     {
       platform: 'researchgate',
@@ -38,8 +38,10 @@ export const profile: Profile = {
       url: 'https://github.com/susil-mohanty',
     },
   ],
-  cvUrl: `${import.meta.env.BASE_URL}cv.pdf`,
-  photoUrl: `${import.meta.env.BASE_URL}assets/images/profile.jpg`,
+  // __DEPLOY_BASE__ (not import.meta.env.BASE_URL, which singlefile forces to './') gives
+  // an absolute path that resolves correctly from any route, e.g. /~susilmohanty/cv.pdf.
+  cvUrl: `${__DEPLOY_BASE__}cv.pdf`,
+  photoUrl: `${__DEPLOY_BASE__}assets/images/profile.jpg`,
 }
 
 export const journeyItems: JourneyItem[] = [
@@ -184,6 +186,26 @@ export const publications: Publication[] = [
     pdfUrl: 'https://eprint.iacr.org/2025/1900',
     abstract:
       'We introduce Beholder Signatures, a new cryptographic primitive designed for use in blockchain and smart-contract settings.',
+  },
+
+  // ── Latest Pre-Print ──────────────────────────────────────────────────────
+  {
+    id: 'trishieldrag-arxiv-2026',
+    title:
+      'TriShieldRAG: A Three-Ring Defense-in-Depth Framework Against Knowledge Corruption in Retrieval-Augmented Generation',
+    authors: [
+      'Susil Kumar Mohanty',
+      'Rohit Patel',
+      'Kosuru Yuvaraj',
+      'Jeenal Chaudhary',
+      'Disha Singhania',
+    ],
+    venue: 'arXiv Pre-Print',
+    year: 2026,
+    type: 'preprint',
+    pdfUrl: 'https://arxiv.org/abs/2607.23838',
+    abstract:
+      'A three-ring defense-in-depth framework that combines an Ingest Guard, a provenance-weighted Retrieval Scorer, and a Cross-LLM Consensus stage to reduce poisoning attack success in Retrieval-Augmented Generation from roughly 91% to roughly 13% while preserving accuracy on benign queries.',
   },
 
   // ── Journals ──────────────────────────────────────────────────────────────
@@ -363,7 +385,7 @@ export const news: NewsItem[] = [
   },
 ]
 
-export const spritLabUrl = 'https://example.com/sprit-lab'
+export const spritLabUrl = 'https://home.iitj.ac.in/~susilmohanty/spritlab/index.html'
 
 export const courses: Course[] = [
   {
